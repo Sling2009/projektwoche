@@ -27,3 +27,16 @@ und testen
 ```bash
 sudo docker run hello-world
 ```
+[Docker-Post Install](https://docs.docker.com/engine/install/linux-postinstall/)
+
+add docker group to sudoers
+```bash
+sudo groupadd docker
+```
+
+
+
+packe uns ins die Docker gruppe
+```bash
+sudo usermod -aG docker $USER
+```
