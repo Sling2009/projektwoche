@@ -29,14 +29,27 @@ sudo docker run hello-world
 ```
 [Docker-Post Install](https://docs.docker.com/engine/install/linux-postinstall/)
 
-add docker group to sudoers
+Wir erstellen eine docker gruppe und packe uns ins die Docker Gruppe
 ```bash
 sudo groupadd docker
+sudo usermod -aG docker $USER
 ```
 
-
-
-packe uns ins die Docker gruppe
+installation von k8s kind.io
 ```bash
-sudo usermod -aG docker $USER
+[ $(uname -m) = x86_64 ] && \
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64 && \
+chmod +x ./kind && \
+sudo mv ./kind /usr/local/bin/
+```
+Was passiert hier, wir prüfen ob wir wirklich eine x86 Archtektur haben mir "[ $(uname -m) = x86_64 ]" dann downloaden uns kind.io latest. machen die binary ausführbar und verschieben sie nach /usr/local/bin/
+
+Installation k9s
+```bash
+[ "$(uname -m)" = "x86_64" ] && \
+curl -Lo k9s.tar.gz https://github.com/derailed/k9s/releases/download/v0.50.4/k9s_Linux_amd64.tar.gz && \
+tar -xzf k9s.tar.gz && \
+chmod +x k9s && \
+sudo mv k9s /usr/local/bin/ && \
+rm k9s.tar.gz LICENSE README.md
 ```
