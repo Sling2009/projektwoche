@@ -1,5 +1,50 @@
 # projektwoche
 
+# Anleitung: Installation von VirtualBox
+
+Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-, macOS- oder Linux-System installiert.
+
+---
+
+## Voraussetzungen
+
+- Ein Computer mit Windows, macOS oder Linux
+- Eine Internetverbindung
+- Admin-Rechte auf deinem System
+
+---
+
+## Schritt 1: VirtualBox herunterladen
+
+1. Öffne die offizielle VirtualBox-Webseite: [https://www.virtualbox.org](https://www.virtualbox.org)
+2. Klicke auf **"Downloads"**.
+3. Wähle das passende Installationspaket:
+   - **Windows hosts** für Windows
+   - **OS X hosts** für macOS
+   - **Linux distributions** für Linux
+
+---
+
+## Schritt 2: Installation unter Windows
+
+1. Doppelklicke auf die heruntergeladene `.exe`-Datei.
+2. Folge dem Installationsassistenten:
+   - Belasse die Voreinstellungen, wenn du unsicher bist.
+   - Klicke auf **"Next"** → **"Next"** → **"Yes"** → **"Install"**.
+3. Bestätige ggf. Benutzerkontensteuerung (UAC).
+4. Klicke auf **"Finish"**, um die Installation abzuschließen.
+
+---
+
+## Schritt 2: Installation unter macOS
+
+1. Öffne die heruntergeladene `.dmg`-Datei.
+2. Doppelklicke auf das **VirtualBox.pkg**-Symbol.
+3. Folge den Anweisungen des Installationsassistenten.
+4. Möglicherweise musst du in den **Systemeinstellungen > Sicherheit** die Installation erlauben.
+
+---
+
 
 [Docker- Doku](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 ```bash
