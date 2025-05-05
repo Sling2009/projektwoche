@@ -44,7 +44,22 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-, macOS-
 4. Möglicherweise musst du in den **Systemeinstellungen > Sicherheit** die Installation erlauben.
 
 ---
+## Schritt 2: Neue VM in VirtualBox erstellen
 
+1. Starte **VirtualBox**.
+2. Klicke auf **"Neu"** oder **"New"**.
+3. Gib einen Namen für die VM ein (z. B. `MeineVM`).
+4. Wähle den **Typ** (z. B. `Microsoft Windows`) und die **Version** (z. B. `Windows 10 (64-bit)`).
+5. Klicke auf **"Weiter"**.
+
+---
+
+## Schritt 3: Arbeitsspeicher festlegen
+
+1. Wähle eine **RAM-Größe**, z. B. **2048 MB** (abhängig von deinem System).
+2. Klicke auf **"Weiter"**.
+
+---
 
 [Docker- Doku](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 ```bash
