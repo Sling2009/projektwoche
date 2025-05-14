@@ -2,17 +2,13 @@
 
 # Anleitung: Installation von VirtualBox
 
-Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-, macOS- oder Linux-System installiert.
-
----
+Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows System installiert.
 
 ## Voraussetzungen
 
-- Ein Computer mit Windows, macOS oder Linux
+- Ein Computer mit Windows
 - Eine Internetverbindung
 - Admin-Rechte auf deinem System
-
----
 
 ## Schritt 1: VirtualBox herunterladen
 
@@ -23,8 +19,6 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-, macOS-
    - **OS X hosts** für macOS
    - **Linux distributions** für Linux
 
----
-
 ## Schritt 2: Installation unter Windows
 
 1. Doppelklicke auf die heruntergeladene `.exe`-Datei.
@@ -34,34 +28,22 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-, macOS-
 3. Bestätige ggf. Benutzerkontensteuerung (UAC).
 4. Klicke auf **"Finish"**, um die Installation abzuschließen.
 
----
+## Schritt 2: VM in VirtualBox von Gold-Image erstellen
 
-## Schritt 2: Installation unter macOS
-
-1. Öffne die heruntergeladene `.dmg`-Datei.
-2. Doppelklicke auf das **VirtualBox.pkg**-Symbol.
-3. Folge den Anweisungen des Installationsassistenten.
-4. Möglicherweise musst du in den **Systemeinstellungen > Sicherheit** die Installation erlauben.
-
----
-## Schritt 2: Neue VM in VirtualBox erstellen
-
-1. Starte **VirtualBox**.
-2. Klicke auf **"Neu"** oder **"New"**.
-3. Gib einen Namen für die VM ein (z. B. `MeineVM`).
-4. Wähle den **Typ** (z. B. `Microsoft Windows`) und die **Version** (z. B. `Windows 10 (64-bit)`).
-5. Klicke auf **"Weiter"**.
+1. **Starte VirtualBox**
+2. Gehe zu **Datei → Appliance importieren**
+3. Wähle die `.ova`-Datei aus
+4. Klicke auf **Weiter**
+5. **Überprüfe die Einstellungen:**
+   - Wähle eine **RAM-Größe**, z. B. **6144 MB** (abhängig von deinem System).
+   - **Netzwerkkarten:** kannst du auf _„nicht verbunden“_ setzen
+   - **Speicherort:** ggf. anpassen
+7. **Wähle bei MAC-Adressen:**
+   - 🔘 **Neue MAC-Adressen generieren**  
+8. Klicke auf **Importieren**
 
 ---
 
-## Schritt 3: Arbeitsspeicher festlegen
-
-1. Wähle eine **RAM-Größe**, z. B. **2048 MB** (abhängig von deinem System).
-2. Klicke auf **"Weiter"**.
-
----
-
----
 ### Git-Repo
 
 Clonen des Repos von GitHub
@@ -105,6 +87,8 @@ Wir erstellen eine docker gruppe und packe uns ins die Docker Gruppe
 sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
+
+---
 
 installation von k8s kind.io
 ```bash
