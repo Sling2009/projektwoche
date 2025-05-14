@@ -1,17 +1,14 @@
 # projektwoche
 
 # Anleitung: Installation von VirtualBox
-
 Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows System installiert.
 
 ## Voraussetzungen
-
-- Ein Computer mit Windows
-- Eine Internetverbindung
-- Admin-Rechte auf deinem System
+   1. Ein Computer mit Windows
+   2. Eine Internetverbindung
+   3. Admin-Rechte auf deinem System
 
 ## Schritt 1: VirtualBox herunterladen
-
 1. Öffne die offizielle VirtualBox-Webseite: [https://www.virtualbox.org](https://www.virtualbox.org)
 2. Klicke auf **"Downloads"**.
 3. Wähle das passende Installationspaket:
@@ -20,7 +17,6 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows System i
    - **Linux distributions** für Linux
 
 ## Schritt 2: Installation unter Windows
-
 1. Doppelklicke auf die heruntergeladene `.exe`-Datei.
 2. Folge dem Installationsassistenten:
    - Belasse die Voreinstellungen, wenn du unsicher bist.
@@ -29,7 +25,6 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows System i
 4. Klicke auf **"Finish"**, um die Installation abzuschließen.
 
 ## Schritt 2: VM in VirtualBox von Gold-Image erstellen
-
 1. **Starte VirtualBox**
 2. Gehe zu **Datei → Appliance importieren**
 3. Wähle die `.ova`-Datei aus
