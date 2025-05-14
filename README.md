@@ -61,6 +61,17 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-, macOS-
 
 ---
 
+---
+### Git-Repo
+
+Clonen des Repos von GitHub
+
+```bash
+git clone https://github.com/Sling2009/projektwoche.git
+```
+
+---
+
 [Docker- Doku](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 ```bash
 # Add Docker's official GPG key:
