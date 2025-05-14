@@ -1,4 +1,5 @@
-# Projektwoche
+# Workshop Docker & Kubernetes am 11.06.2025 - 12.06.2025
+In diesem Repo sind alle notwendigen Dateien für den Workshop Docker & Kubernetes am 11.06.2025 - 12.06.2025 enthalten. Es dient als Orientierung und Unterstützung zum Vortrag. Es umfasst sowohl Lösungen als auch eine Sammlung von Links für die jeweils genutzte Software in der VM.
 
 ## Anleitung: Installation von VirtualBox
 
@@ -46,7 +47,7 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-System i
 Clonen des Repos von GitHub
 ```bash
 git clone https://github.com/Sling2009/projektwoche.git
-
+```
 ## Docker
 Docker heerunterladen wie in der [Docker-Doku](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) beschrieben
 ```bash
