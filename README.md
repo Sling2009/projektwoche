@@ -101,3 +101,7 @@ chmod +x k9s && \
 sudo mv k9s /usr/local/bin/ && \
 rm k9s.tar.gz LICENSE README.md
 ```
+
+### Docker Befehle
+docker build --build-arg APP_VERSION=1.0.0 -t http-app:latest .
+docker run -d --name http-app -e PORT=8686 -p 8080:8686 http-app:latest
