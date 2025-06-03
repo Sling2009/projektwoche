@@ -42,6 +42,7 @@ func headers(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
+	fmt.Printf("App Version: %s\n", appVersion) // Ausgabe der Version beim Start
 	p := port()
 	http.HandleFunc("/", headers)
 	fmt.Printf("Listening, try http://localhost:%d/\n", p)
