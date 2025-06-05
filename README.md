@@ -99,7 +99,7 @@ sudo mv ./kind /usr/local/bin/
 ```
 Was passiert hier? Wir prüfen, ob wir wirklich eine x86-Architektur haben mit [ $(uname -m) = x86_64 ], dann laden wir die aktuelle Version von kind.io herunter, machen die Binary ausführbar und verschieben sie nach /usr/local/bin/.
 
-## k9s
+### k9s
 Download [k9s](https://k9scli.io/) und installieren
 ```bash
 [ "$(uname -m)" = "x86_64" ] && \
