@@ -81,6 +81,14 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
+##kubectl instalieren
+```bash
+[ $(uname -m) = x86_64 ] && \
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && \
+chmod +x ./kubectl && \
+sudo mv ./kubectl /usr/local/bin/
+```
+
 ## k8s kind.io
 Download [kind.io](https://kind.sigs.k8s.io/) und installieren
 ```bash
