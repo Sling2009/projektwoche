@@ -77,8 +77,8 @@ Nach erfolgreicher INstallation [Docker-Post Install](https://docs.docker.com/en
 
 Wir erstellen eine Docker-Gruppe und fügen $USER dieser hinzu:
 ```bash
-sudo groupadd docker
 sudo usermod -aG docker $USER
+loginctl terminate-session $XDG_SESSION_ID
 ```
 
 ## kubectl instalieren
