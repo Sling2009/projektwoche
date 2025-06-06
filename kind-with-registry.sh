@@ -2,7 +2,7 @@
 set -o errexit
 
 # 1. Create registry container unless it already exists
-reg_name='registry'
+reg_name='kind-registry'
 reg_port='5001'
 if [ "$(docker inspect -f '{{.State.Running}}' "${reg_name}" 2>/dev/null || true)" != 'true' ]; then
   docker run \
@@ -20,7 +20,7 @@ fi
 # https://github.com/kubernetes-sigs/kind/issues/2875
 # https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration
 # See: https://github.com/containerd/containerd/blob/main/docs/hosts.md
-kind create cluster --config="kind_config.yaml"
+kind create cluster --config=kind_config.yaml
 
 # 3. Add the registry config to the nodes
 #
