@@ -7,6 +7,9 @@ containerdConfigPatches:
 nodes:
   - role: control-plane
     image: kindest/node:v1.33.1
+    extraPortMappings:
+      - containerPort: 30080
+        hostPort: 30080
     labels:
       controll-plane: true
   - role: worker
