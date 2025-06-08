@@ -15,4 +15,5 @@ spec:
       - name: quote
         image: busybox
         command: ["sh", "-c", "echo 'Wissen ist nicht das Problem. Das Problem ist der Glaube.'"]
+#        command: ["sh", "-c", "echo 'Fehlerhafte Ausführung'; exit 1"]
       restartPolicy: OnFailure   # Restart nur bei Fehlschlag erlaubt
