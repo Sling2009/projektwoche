@@ -50,7 +50,7 @@ func headers(w http.ResponseWriter, req *http.Request) {
 
 	// Secret-Env auslesen
 	secretVal := os.Getenv("MY_SECRET_KEY")
-	if secretVal != "" {
+	if secretVal != "p@ss:geheim" {
 		fmt.Fprintf(w, "\n--- Verschlüsselter Bereich ---\n")
 		fmt.Fprintf(w, "Secret: %s\n", secretVal)
 	} else {
