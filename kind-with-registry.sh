@@ -2,14 +2,27 @@
 set -o errexit
 
 # 1. Create registry container unless it already exists
+# 1. Setup
 reg_name='kind-registry'
 reg_port='5001'
-if [ "$(docker inspect -f '{{.State.Running}}' "${reg_name}" 2>/dev/null || true)" != 'true' ]; then
-  docker run \
-    -d --restart=always -p "127.0.0.1:${reg_port}:5000" --network bridge --name "${reg_name}" \
-    registry:2
+reg_volume='registry'
+
+# 2. Create volume if it doesn't exist
+if ! docker volume inspect "${reg_volume}" > /dev/null 2>&1; then
+  docker volume create "${reg_volume}"
 fi
 
+# 3. Create registry container unless it already exists
+if [ "$(docker inspect -f '{{.State.Running}}' "${reg_name}" 2>/dev/null || true)" != 'true' ]; then
+  docker run \
+    -d \
+    --restart=always \
+    -p "127.0.0.1:${reg_port}:5000" \
+    --network bridge \
+    --name "${reg_name}" \
+    -v "${reg_volume}:/var/lib/registry" \
+    registry:2
+fi
 # 2. Create kind cluster with containerd registry config dir enabled
 #
 # NOTE: the containerd config patch is not necessary with images from kind v0.27.0+
