@@ -1,6 +1,33 @@
 # Workshop Docker & Kubernetes am 11.06.2025 - 12.06.2025
 In diesem Repo sind alle notwendigen Dateien für den Workshop Docker & Kubernetes am 11.06.2025 - 12.06.2025 enthalten. Es dient als Orientierung und Unterstützung zum Vortrag. Es umfasst sowohl Lösungen als auch eine Sammlung von Links für die jeweils genutzte Software in der VM.
 
+### Nützliche Links
+
+## Gold-Image für Virtual-Box
+https://drive.google.com/file/d/1QWO-WzCMTt_Elf3fcaI1NLbW5ZXD1TfH/view?usp=sharing
+
+## VM
+https://xubuntu.org/
+https://github.com/xfce-mirror/xfce4-terminal
+https://www.nerdfonts.com/
+https://www.mozilla.org/de/firefox/linux/
+https://git-scm.com/book/de/v2/Erste-Schritte-Git-installieren
+https://www.zsh.org/
+https://github.com/ohmyzsh/ohmyzsh
+https://github.com/dylanaraps/neofetch
+https://github.com/junegunn/fzf
+https://github.com/adi1090x/rofi
+https://github.com/i3/i3
+
+## Nützliche tools
+https://k9scli.io/
+https://github.com/ahmetb/kubectx/tree/master
+
+## CheatSheets
+https://kubernetes.io/de/docs/reference/kubectl/cheatsheet/
+https://docs.docker.com/engine/install/ubuntu/
+https://www.shortcutfoo.com/app/dojos/neovim/cheatsheet
+
 ## Anleitung: Installation von VirtualBox
 
 Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-System installiert.
