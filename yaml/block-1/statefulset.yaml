@@ -8,6 +8,10 @@ spec:
   selector:
     matchLabels:
       app: agentsmith
+  template:
+    metadata:
+      labels:
+        app: agentsmith
     spec:
       containers:
       - name: busybox
