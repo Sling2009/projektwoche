@@ -2,13 +2,17 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: merowinger-quote
+  name: merowinger-quote-job
 spec:
+  completions: 1             # Anzahl der erfolgreichen Durchläufe bis Job abgeschlossen ist
+  parallelism: 1             # Wie viele Pods gleichzeitig laufen dürfen
+  backoffLimit: 3            # Max. Fehlversuche pro Pod vor Abbruch
+  ttlSecondsAfterFinished: 60  # Lebensdauer des Jobs nach Abschluss (Sekunden)
+  activeDeadlineSeconds: 120   # Maximale Zeit für Job-Ausführung (Sekunden)
   template:
     spec:
       containers:
       - name: quote
         image: busybox
-        command: ["sh", "-c", "echo 'Es ist die Frage der Ursache und Wirkung. Das ist es, was wir hier haben.'"]
-      restartPolicy: Never
-  backoffLimit: 1
+        command: ["sh", "-c", "echo 'Wissen ist nicht das Problem. Das Problem ist der Glaube.'"]
+      restartPolicy: OnFailure   # Restart nur bei Fehlschlag erlaubt
