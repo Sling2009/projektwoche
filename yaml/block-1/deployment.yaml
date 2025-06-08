@@ -7,7 +7,10 @@ spec:
   selector:
     matchLabels:
       app: agentsmith
-  template:
+  template:                        # Hier kommt das Pod-Template hin
+    metadata:
+      labels:
+        app: agentsmith
     spec:
       containers:
       - name: busybox
