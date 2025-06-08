@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: agentsmith-daemonset
+spec:
+  selector:
+    matchLabels:
+      app: agentsmith
+  template:
+    metadata:
+      labels:
+        app: agentsmith
+    spec:
+      containers:
+      - name: busybox
+        image: busybox:latest
+        command: ["sh", "-c", "while true; do echo 'Hello, Mr. Anderson'; sleep 1; done"]
