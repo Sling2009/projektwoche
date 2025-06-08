@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: merowinger-quote-cron
+spec:
+  schedule: "*/1 * * * *"        
+  successfulJobsHistoryLimit: 3   # Wie viele erfolgreiche Jobs behalten werden
+  failedJobsHistoryLimit: 1       # Wie viele fehlgeschlagene Jobs behalten werden
+  jobTemplate:
+    spec:
+      completions: 1
+      parallelism: 1
+      backoffLimit: 3
+      ttlSecondsAfterFinished: 60
+      activeDeadlineSeconds: 120
+      template:
+        spec:
+          containers:
+          - name: quote
+            image: busybox
+            command: ["sh", "-c", "echo 'Wissen ist nicht das Problem. Das Problem ist der Glaube.'"]
+#            command: ["sh", "-c", "echo 'Fehlerhafte Ausführung'; exit 1"]
+          restartPolicy: OnFailure
