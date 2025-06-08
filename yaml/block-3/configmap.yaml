@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: http-app-config
 data:
-  ENVIROMENT: "lokales-kind-cluster"
+  ENVIRONMENT: "lokales-kind-cluster"
