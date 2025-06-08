@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: agentsmith-statefulset
+spec:
+  serviceName: "agentsmith"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agentsmith
+  template:
+    metadata:
+      labels:
+        app: agentsmith
+    spec:
+      containers:
+      - name: busybox
+        image: busybox:latest
+        command: ["sh", "-c", "while true; do echo 'Hello, Mr. Anderson'; sleep 1; done"]
