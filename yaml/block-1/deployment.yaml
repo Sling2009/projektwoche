@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: agentsmith
-  template:                        # Hier kommt das Pod-Template hin
+  template:
     metadata:
       labels:
         app: agentsmith
