@@ -3,6 +3,6 @@ kind: Namespace
 metadata:
   name: workshop
   labels:
-    created-by: "Axel Fischer"
+    created-by: "aFischer"
     purpose: "workshop-demo"
     environment: "dev"
