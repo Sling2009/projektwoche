@@ -56,7 +56,7 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-System i
 3. Bestätige ggf. die Benutzerkontensteuerung (UAC)  
 4. Klicke auf **"Finish"**, um die Installation abzuschließen  
 
-### Schritt 3: VM in VirtualBox von Gold-Image erstellen
+### Schritt 3: VM in VirtualBox vom Gold-Image erstellen
 
 1. **Starte VirtualBox**  
 2. Gehe zu **Datei → Appliance importieren**  
@@ -68,10 +68,10 @@ Diese Anleitung beschreibt, wie man Oracle VirtualBox auf einem Windows-System i
    - **Speicherort:** ggf. anpassen  
 6. **Wähle bei MAC-Adressen:**  
    - 🔘 **Neue MAC-Adressen generieren**  
-7. Klicke auf **Importieren**  
+7. Klicke auf **Importieren** 
 
 ## Git-Repo
-Clonen des Repos von GitHub
+Clonen des Repos von GitHub:
 ```bash
 git clone https://github.com/Sling2009/projektwoche.git
 ```
@@ -144,5 +144,5 @@ rm k9s.tar.gz LICENSE README.md
 ```
 
 ### Docker Befehle
-docker build --build-arg APP_VERSION=1.0.0 -t http-app:latest .
+docker build --build-arg APP_VERSION=1.0. -t http-app:latest .
 docker run -d --name http-app -e PORT=8686 -p 8080:8686 http-app:latest
